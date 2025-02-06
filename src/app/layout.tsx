@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 
+import Header from "./components/layout/Header";
+
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["400", "700"],
@@ -21,7 +23,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={poppins.variable}>{children}</body>
+      <body className={poppins.variable}>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
