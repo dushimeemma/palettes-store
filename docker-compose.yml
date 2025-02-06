@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  palette:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: palette-store
+    ports:
+      - "3000:3000"
+    restart: always
